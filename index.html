@@ -3,8 +3,13 @@
 
 <head>
 	<meta charset="UTF-8">
-	<title>MUSE</title>
+	<title>生活用品紀錄</title>
 	<script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+	<script src="https://cdn.datatables.net/1.10.11/js/jquery.dataTables.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.11/css/jquery.dataTables.min.css">
+	
+	
+	
 	
 </head>
 
@@ -12,12 +17,42 @@
 測試
 
 
+<table id="example" class="display">
+    <thead>
+        <tr>
+            <th>品名</th>
+            <th>價錢</th>
+            <th>地點</th>
+            <th>時間</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr><td>明台機車強制險(2年)(優惠150元)</td><td>1050元</td><td>明台公司</td><td>20160420</td></tr>
+        <tr><td>Row 2 Data 1</td><td>Row 2 Data 2</td> <td>Row 1 Data 2</td><td>Row 1 Data 2</td></tr>
+        <tr><td>Row 2 Data 1</td><td>Row 2 Data 2</td> <td>Row 1 Data 2</td><td>Row 1 Data 2</td></tr>
+        <tr><td>Row 2 Data 1</td><td>Row 2 Data 2</td> <td>Row 1 Data 2</td><td>Row 1 Data 2</td></tr>
+        <tr><td>Row 2 Data 1</td><td>Row 2 Data 2</td> <td>Row 1 Data 2</td><td>Row 1 Data 2</td></tr>
+        <tr><td>Row 2 Data 1</td><td>Row 2 Data 2</td> <td>Row 1 Data 2</td><td>Row 1 Data 2</td></tr>
+        <tr><td>Row 2 Data 1</td><td>Row 2 Data 2</td> <td>Row 1 Data 2</td><td>Row 1 Data 2</td></tr>
+        <tr><td>Row 2 Data 1</td><td>Row 2 Data 2</td> <td>Row 1 Data 2</td><td>Row 1 Data 2</td></tr>
+        <tr><td>Row 2 Data 1</td><td>Row 2 Data 2</td> <td>Row 1 Data 2</td><td>Row 1 Data 2</td></tr>
+        <tr><td>Row 2 Data 1</td><td>Row 2 Data 2</td> <td>Row 1 Data 2</td><td>Row 1 Data 2</td></tr>
+        <tr><td>Row 2 Data 1</td><td>Row 2 Data 2</td> <td>Row 1 Data 2</td><td>Row 1 Data 2</td></tr>
+        <tr><td>Row 2 Data 1</td><td>Row 2 Data 2</td> <td>Row 1 Data 2</td><td>Row 1 Data 2</td></tr>
+        <tr><td>Row 2 Data 1</td><td>Row 2 Data 2</td> <td>Row 1 Data 2</td><td>Row 1 Data 2</td></tr>
+    </tbody>
+</table>
+
 <script>
 function localJsonpCallback(data){
 	console.log('4');
 }
 
 $(document).ready( function() {
+	$('#example').DataTable();
+
+
+
 	$( '#onlineBtn' ).click(function() {
 		console.log( "Online!" );
 		$.ajax({
@@ -55,8 +90,7 @@ $(document).ready( function() {
 </script>
 
 
-<button type="button" id="onlineBtn">Online!</button>
-<button type="button" id="offlineBtn">Offine!</button>
+
 
 
 </body>
